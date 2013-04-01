@@ -81,7 +81,6 @@ public class Diff_diff_File_String_Test {
     writer.write(actual, "line_0");
     String expected = "line_0\nline_1";
     List<String> diffs = diff.diff(actual, expected, Charset.defaultCharset());
-    System.out.println(diffs);
     assertEquals(1, diffs.size());
     assertEquals("line:<1>, expected:<line_1> but was:<EOF>", diffs.get(0));
   }
